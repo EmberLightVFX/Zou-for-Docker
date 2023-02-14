@@ -1,10 +1,8 @@
 # Zou for Docker
 
-Dockerfile for [Zou](https://zou.cg-wire.com/)
+**Dockerfile for [Zou](https://zou.cg-wire.com/)**
 
-## *For usage with Kitsu, please check the [Kitsu for Docker](https://github.com/EmberLightVFX/Kitsu-for-Docker) repo.*
-
-[TOC]
+### *For usage with Kitsu, please check the [Kitsu for Docker](https://github.com/EmberLightVFX/Kitsu-for-Docker) repo.*
 
 
 # Info about this dockerfile
@@ -18,9 +16,9 @@ If you have set the .env to get the latest version you can simply restart the co
 
 Check out the [docker-compose.yaml](docker-compose.yaml) file in the repo for the setup.
 
-Modify the `.env` file as needed for your setup.
+Modify the [.env](.env) file as needed for your setup.
 
-Place the [db/ph_Ctl.conf](db/ph_Ctl.conf) at ./db/pg_ctl.conf from the docker-compose.yaml file or modify the docker-compose to match the location.
+Place the [db/pg_ctl.conf](db/pg_ctl.conf) at `./db/pg_ctl.conf` from your docker-compose.yaml location or modify the docker-compose to match the location.
 
 
 # Usage
