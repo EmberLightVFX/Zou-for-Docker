@@ -10,13 +10,12 @@ ARG ZOU_VERSION=latest
 
 RUN pip install --no-cache-dir --upgrade pip wheel setuptools \
     && pip install --no-cache-dir zou
-    
 
 FROM python:${PY_V}-alpine
 LABEL maintainer="Jacob Danell <jacob@emberlight.se>"
 USER root
 
-RUN apk add --no-cache ffmpeg bzip2 postgresql-libs postgresql-client
+RUN apk add --no-cache ffmpeg bzip2 postgresql-libs postgresql-client curl jq
 
 ARG PY_V
 
@@ -24,6 +23,6 @@ COPY --from=builder /usr/local/lib/python${PY_V} /usr/local/lib/python${PY_V}
 COPY --from=builder /usr/local/bin /usr/local/bin
 
 ENV ZOU_FOLDER /usr/local/lib/python${PY_V}/site-packages/zou
-WORKDIR ${ZOU_FOLDER}
 
+COPY download_zou.sh /download_zou.sh
 COPY init_zou.sh /init_zou.sh
