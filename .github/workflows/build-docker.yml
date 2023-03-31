@@ -1,7 +1,7 @@
 name: Build Docker
 on:
   repository_dispatch:
-    types: [*]
+    types: [kitsu-release]
 
 jobs:
   build:
