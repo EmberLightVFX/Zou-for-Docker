@@ -1,7 +1,7 @@
 name: Build Docker
 on:
   repository_dispatch:
-    types: [MY_SECRET]
+    types: [kitsu-relese]
 
 jobs:
   build:
