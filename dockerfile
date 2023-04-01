@@ -29,4 +29,6 @@ VOLUME /opt/zou/previews
 VOLUME /tmp/zou
 
 COPY init_zou.sh /init_zou.sh
+RUN chmod +x /init_zou.sh
 COPY upgrade_zou.sh /upgrade_zou.sh
+RUN chmod +x /upgrade_zou.sh
