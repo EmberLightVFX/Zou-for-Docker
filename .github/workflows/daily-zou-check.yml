@@ -1,8 +1,8 @@
 name: Daily Check
 
 on:
-  #schedule:
-  #  - cron: '0 0 * * *'
+  schedule:
+    - cron: '0 0 * * *'
   workflow_dispatch:
 
 env:
@@ -53,6 +53,7 @@ jobs:
           echo "No update found"
           echo "BUILD=False" >> $GITHUB_ENV
         fi
+
     - name: Trigger docker-publish.yml
       run: |
         if [[ "${{ env.BUILD }}" == "True" ]]; then

@@ -3,7 +3,7 @@ version: '3.8'
 services:
   zou-app:
     container_name: cgwire-zou-app
-    image: emberlightvfx/zou-for-docker:latest
+    image: ghcr.io/emberlightvfx/zou-for-docker:latest
     depends_on:
       - db
     volumes:
@@ -19,7 +19,7 @@ services:
 
   zou-event:
     container_name: cgwire-zou-event
-    image: emberlightvfx/zou-for-docker:latest
+    image: ghcr.io/emberlightvfx/zou-for-docker:latest
     depends_on:
       - redis
     env_file:
@@ -32,7 +32,7 @@ services:
 
   zou-jobs:
     container_name: cgwire-zou-jobs
-    image: emberlightvfx/zou-for-docker:latest
+    image: ghcr.io/emberlightvfx/zou-for-docker:latest
     volumes:
       - 'previews:/opt/zou/previews'
       - 'tmp:/tmp/zou'
