@@ -87,7 +87,6 @@ jobs:
           push: true
           tags: ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}
-          build-args: |
-            ZOU_VERSION=${{ env.ZOU_VERSION }}
-          cache-from: type=gha
-          cache-to: type=gha,mode=max
+          build-args: ZOU_VERSION=${{ env.ZOU_VERSION }}
+          #cache-from: type=gha
+          #cache-to: type=gha,mode=max
