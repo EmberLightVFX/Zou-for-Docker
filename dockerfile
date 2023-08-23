@@ -9,7 +9,7 @@ ARG PY_V
 ARG ZOU_VERSION
 
 RUN pip install --no-cache-dir --upgrade pip wheel setuptools \
-    && pip install --no-cache-dir zou==${ZOU_VERSION}  
+    && pip install --no-cache-dir zou==${ZOU_VERSION} "psycopg[binary,c]" libpq
 
 FROM python:${PY_V}-alpine
 LABEL maintainer="Jacob Danell <jacob@emberlight.se>"
