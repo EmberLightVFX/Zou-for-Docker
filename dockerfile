@@ -19,7 +19,7 @@ LABEL maintainer="Jacob Danell <jacob@emberlight.se>"
 USER root
 
 RUN apt update \
-    && apt install -y --no-install-recommends ffmpeg bzip2 postgresql-client \
+    && apt install -y --no-install-recommends ffmpeg bzip2 postgresql-client xmlsec1 \
     && apt autoclean \
     && rm -rf /var/lib/apt/lists/*
 
