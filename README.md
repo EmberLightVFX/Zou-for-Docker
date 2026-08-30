@@ -19,10 +19,7 @@ Place the [db/pg_ctl.conf](db/pg_ctl.conf) at `./db/pg_ctl.conf` from your docke
 On first run the installation will download your wanted Zou version.
 It will then initialize and populate the database and create a `initialized.txt` file in your previews folder. This is done to make sure the initializion is done only ones.
 If something goes wrong on your first launch, delete this file to re-initialize the database, else **never delete this file!**
-A default admin account will also be created:
-
-- login: admin@example.com
-- password: mysecretpassword
+A default admin account will also be created with the login credentials defined in [.env](.env).
 
 
 # Zou commands
